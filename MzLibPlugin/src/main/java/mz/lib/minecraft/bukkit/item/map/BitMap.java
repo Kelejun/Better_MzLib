@@ -83,31 +83,6 @@ public interface BitMap extends MzMap
 		for(int i=0;i<x*128;i++)
 			for(int j=0;j<y*128;j++)
 				temp[i][j]=new RGB(new Color(tar.getRGB(i,j)));
-		for(int j=0;j<y*128;j++)
-			for(int i=0;i<x*128;i++)
-			{
-				int n=WrappedMapPalette.matchColor(temp[i][j].toColor());
-				if(n<0)
-					n+=256;
-				RGB err=temp[i][j].subtract(new RGB(WrappedMapPalette.getColors()[n]));
-				if(i+1<x*128)
-				{
-					temp[i+1][j]=temp[i+1][j].add(err.multiply(7./16));
-					err=err.multiply(9./16);
-				}
-				if(j+1<y*128)
-				{
-					if(i>0)
-					{
-						temp[i-1][j+1]=temp[i-1][j+1].add(err.multiply(3./9));
-						err=err.multiply(6./9);
-					}
-					temp[i][j+1]=temp[i][j+1].add(err.multiply(5./6));
-					err=err.multiply(1./6);
-					if(i+1<x*128)
-						temp[i+1][j+1]=temp[i+1][j+1].add(err);
-				}
-			}
 		for(int j=0;j!=y;j++)
 			for(int i=0;i!=x;i++)
 			{
