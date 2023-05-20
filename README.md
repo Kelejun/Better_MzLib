@@ -16,9 +16,14 @@
 MzLib 是一个基于 Bukkit 平台的开发类库，同时自带许多基础功能。
 > 本插件同时在 [Mcbbs](https://www.mcbbs.net/thread-1250793-1-1.html) 上发布。
 
+## 分支概述
+此分支是基于 MzLib 主分支所创建的分支，移除了 MzLib 地图画生成器中的 floyd 颜色抖动算法以保证地图画不会出现变色问题（MZ 说这个算法是为了使颜色《更为准确》而增加的）
+* 出现 BUG 请勿在此处提 Issue ，需要提 Issue 请转到 [主分支仓库](https://github.com/BugCleanser/MzLib_old)
+
 ## 安装
 本体安装：
-1. 在 [Releases (稳定)](https://github.com/BugCleanser/MzLib_old/releases) 或 [Actions (测试)](https://github.com/BugCleanser/MzLib_old/actions) 下载插件本体；
+1. 在 [Releases (稳定)](https://github.com/Kelejun/Better_MzLib/releases) 或 [Actions (测试)](https://github.com/Kelejun/Better_MzLib/actions) 下载此分支的插件本体；
+> 主分支：在 [Releases (稳定)](https://github.com/BugCleanser/MzLib_old/releases) 或 [Actions (测试)](https://github.com/BugCleanser/MzLib_old/actions) 下载插件本体；
 2. 将插件本体放入服务端的 `plugins` 文件夹内；
 3. 使用 [PlugManX](https://www.spigotmc.org/resources/plugmanx.88135/) 热加载 或 `/stop` 重启服务器以使用 MzLib。
 
